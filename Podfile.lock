@@ -1,0 +1,51 @@
+PODS:
+  - Bolts-Swift (1.3.0)
+  - Bolts/Tasks (1.9.0)
+  - MessengerKit (1.0.0)
+  - Parse (1.17.1):
+    - Parse/Core (= 1.17.1)
+  - Parse/Core (1.17.1):
+    - Bolts/Tasks (~> 1.9)
+  - ParseLiveQuery (2.4.0):
+    - Bolts-Swift (~> 1.3.0)
+    - Parse (~> 1.17.0)
+    - Starscream (~> 3.0.4)
+  - Starscream (3.0.5)
+  - SwiftDate (4.5.1)
+
+DEPENDENCIES:
+  - MessengerKit (from `https://github.com/steve228uk/MessengerKit.git`)
+  - Parse
+  - ParseLiveQuery
+  - SwiftDate
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Bolts
+    - Bolts-Swift
+    - Parse
+    - ParseLiveQuery
+    - Starscream
+    - SwiftDate
+
+EXTERNAL SOURCES:
+  MessengerKit:
+    :git: https://github.com/steve228uk/MessengerKit.git
+
+CHECKOUT OPTIONS:
+  MessengerKit:
+    :commit: 98c2eef4afa43507dda501230abf40a82ff9273c
+    :git: https://github.com/steve228uk/MessengerKit.git
+
+SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Bolts-Swift: fa98d1b59fc1acea9b21a21306dcdca1c85e3737
+  MessengerKit: 98afa44728b8e12672ece6db7764433e72832bf7
+  Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
+  ParseLiveQuery: 0ea078a12015d64070d0ae07da32fae3d3198c42
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+
+PODFILE CHECKSUM: 7ca980234f445a09a1513199dd8709c705029e7d
+
+COCOAPODS: 1.5.3

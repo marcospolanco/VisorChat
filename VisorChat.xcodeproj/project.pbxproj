@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1F32E5AF7DBA366138BA75 /* Pods_VisorChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7F9539637D96B14BC23A3D /* Pods_VisorChat.framework */; };
 		EF3DD41720DFF14B0080E736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3DD41620DFF14B0080E736 /* AppDelegate.swift */; };
-		EF3DD41920DFF14B0080E736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3DD41820DFF14B0080E736 /* ViewController.swift */; };
+		EF3DD41920DFF14B0080E736 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3DD41820DFF14B0080E736 /* FeedViewController.swift */; };
 		EF3DD41C20DFF14B0080E736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD41A20DFF14B0080E736 /* Main.storyboard */; };
 		EF3DD41E20DFF14E0080E736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD41D20DFF14E0080E736 /* Assets.xcassets */; };
 		EF3DD42120DFF14E0080E736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD41F20DFF14E0080E736 /* LaunchScreen.storyboard */; };
+		EF3DD42920DFF32B0080E736 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD42820DFF32B0080E736 /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F56ED88430B694A7B0E90AC /* Pods-VisorChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisorChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisorChat/Pods-VisorChat.debug.xcconfig"; sourceTree = "<group>"; };
+		CB7F9539637D96B14BC23A3D /* Pods_VisorChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VisorChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3DD41320DFF14B0080E736 /* VisorChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisorChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3DD41620DFF14B0080E736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF3DD41820DFF14B0080E736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF3DD41820DFF14B0080E736 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EF3DD41B20DFF14B0080E736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF3DD41D20DFF14E0080E736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF3DD42020DFF14E0080E736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF3DD42220DFF14E0080E736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3DD42820DFF32B0080E736 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		F2783332B26C93B7E41B834E /* Pods-VisorChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisorChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisorChat/Pods-VisorChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1F32E5AF7DBA366138BA75 /* Pods_VisorChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03F99C7AEA106DAEE1019EE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F9539637D96B14BC23A3D /* Pods_VisorChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9864C5AD9C81994535E4DD58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F56ED88430B694A7B0E90AC /* Pods-VisorChat.debug.xcconfig */,
+				F2783332B26C93B7E41B834E /* Pods-VisorChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF3DD40A20DFF14B0080E736 = {
 			isa = PBXGroup;
 			children = (
 				EF3DD41520DFF14B0080E736 /* VisorChat */,
 				EF3DD41420DFF14B0080E736 /* Products */,
+				9864C5AD9C81994535E4DD58 /* Pods */,
+				03F99C7AEA106DAEE1019EE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				EF3DD41620DFF14B0080E736 /* AppDelegate.swift */,
-				EF3DD41820DFF14B0080E736 /* ViewController.swift */,
+				EF3DD41820DFF14B0080E736 /* FeedViewController.swift */,
 				EF3DD41A20DFF14B0080E736 /* Main.storyboard */,
 				EF3DD41D20DFF14E0080E736 /* Assets.xcassets */,
 				EF3DD41F20DFF14E0080E736 /* LaunchScreen.storyboard */,
 				EF3DD42220DFF14E0080E736 /* Info.plist */,
+				EF3DD42820DFF32B0080E736 /* Config.plist */,
 			);
 			path = VisorChat;
 			sourceTree = "<group>";
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF3DD42520DFF14E0080E736 /* Build configuration list for PBXNativeTarget "VisorChat" */;
 			buildPhases = (
+				AD95604F2B8B57432E6F4492 /* [CP] Check Pods Manifest.lock */,
 				EF3DD40F20DFF14B0080E736 /* Sources */,
 				EF3DD41020DFF14B0080E736 /* Frameworks */,
 				EF3DD41120DFF14B0080E736 /* Resources */,
+				8942DDBFA3CFA848BF4033D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3DD42920DFF32B0080E736 /* Config.plist in Resources */,
 				EF3DD42120DFF14E0080E736 /* LaunchScreen.storyboard in Resources */,
 				EF3DD41E20DFF14E0080E736 /* Assets.xcassets in Resources */,
 				EF3DD41C20DFF14B0080E736 /* Main.storyboard in Resources */,
@@ -130,12 +160,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8942DDBFA3CFA848BF4033D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VisorChat/Pods-VisorChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/MessengerKit/MessengerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseLiveQuery/ParseLiveQuery.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessengerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseLiveQuery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VisorChat/Pods-VisorChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD95604F2B8B57432E6F4492 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VisorChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF3DD40F20DFF14B0080E736 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3DD41920DFF14B0080E736 /* ViewController.swift in Sources */,
+				EF3DD41920DFF14B0080E736 /* FeedViewController.swift in Sources */,
 				EF3DD41720DFF14B0080E736 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +359,7 @@
 		};
 		EF3DD42620DFF14E0080E736 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F56ED88430B694A7B0E90AC /* Pods-VisorChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +378,7 @@
 		};
 		EF3DD42720DFF14E0080E736 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2783332B26C93B7E41B834E /* Pods-VisorChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
