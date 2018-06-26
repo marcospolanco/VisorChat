@@ -12,12 +12,16 @@ PODS:
     - Starscream (~> 3.0.4)
   - Starscream (3.0.5)
   - SwiftDate (4.5.1)
+  - SwiftSpinner (1.5.0)
+  - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
   - MessengerKit (from `https://github.com/steve228uk/MessengerKit.git`)
   - Parse
   - ParseLiveQuery
   - SwiftDate
+  - SwiftSpinner
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -27,15 +31,22 @@ SPEC REPOS:
     - ParseLiveQuery
     - Starscream
     - SwiftDate
+    - SwiftSpinner
 
 EXTERNAL SOURCES:
   MessengerKit:
     :git: https://github.com/steve228uk/MessengerKit.git
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
 
 CHECKOUT OPTIONS:
   MessengerKit:
     :commit: 98c2eef4afa43507dda501230abf40a82ff9273c
     :git: https://github.com/steve228uk/MessengerKit.git
+  SwiftValidator:
+    :commit: ba27b0e501bf542b5c1a97bed8f706d12fb2d4f4
+    :git: https://github.com/jpotts18/SwiftValidator.git
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -45,7 +56,9 @@ SPEC CHECKSUMS:
   ParseLiveQuery: 0ea078a12015d64070d0ae07da32fae3d3198c42
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwiftSpinner: 4c058c7a1d6b444dd2e1d70988ead40783097133
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
-PODFILE CHECKSUM: 7ca980234f445a09a1513199dd8709c705029e7d
+PODFILE CHECKSUM: ebf7d2842c5c3903eed7fd69af83b498adbee258
 
 COCOAPODS: 1.5.3

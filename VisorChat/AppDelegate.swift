@@ -36,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //initialize Parse
         Parse.initialize(with: parseConfig)
-        PFUser.enableAutomaticUser()
         PFUser.enableRevocableSessionInBackground()
         
         //initialize LiveQuery

@@ -14,6 +14,11 @@
 		EF3DD41E20DFF14E0080E736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD41D20DFF14E0080E736 /* Assets.xcassets */; };
 		EF3DD42120DFF14E0080E736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD41F20DFF14E0080E736 /* LaunchScreen.storyboard */; };
 		EF3DD42920DFF32B0080E736 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD42820DFF32B0080E736 /* Config.plist */; };
+		EF58608D20E1D38400D32EC8 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF58608C20E1D38400D32EC8 /* LoginViewController.storyboard */; };
+		EF58608F20E1D39700D32EC8 /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF58608E20E1D39700D32EC8 /* SignupViewController.storyboard */; };
+		EF58609220E1D3B900D32EC8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF58609120E1D3B900D32EC8 /* SignupViewController.swift */; };
+		EFF8F8D120E1E394003CBA0D /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF8F8D020E1E394003CBA0D /* FeedViewController.storyboard */; };
+		EFF8F8D320E1E3F6003CBA0D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8F8D220E1E3F6003CBA0D /* MainNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		EF3DD42020DFF14E0080E736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF3DD42220DFF14E0080E736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF3DD42820DFF32B0080E736 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		EF58608C20E1D38400D32EC8 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		EF58608E20E1D39700D32EC8 /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
+		EF58609120E1D3B900D32EC8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		EFF8F8D020E1E394003CBA0D /* FeedViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		EFF8F8D220E1E3F6003CBA0D /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		F2783332B26C93B7E41B834E /* Pods-VisorChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisorChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-VisorChat/Pods-VisorChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,15 +90,28 @@
 		EF3DD41520DFF14B0080E736 /* VisorChat */ = {
 			isa = PBXGroup;
 			children = (
+				EFF8F8D020E1E394003CBA0D /* FeedViewController.storyboard */,
 				EF3DD41620DFF14B0080E736 /* AppDelegate.swift */,
+				EFF8F8D220E1E3F6003CBA0D /* MainNavigationController.swift */,
 				EF3DD41820DFF14B0080E736 /* FeedViewController.swift */,
 				EF3DD41A20DFF14B0080E736 /* Main.storyboard */,
 				EF3DD41D20DFF14E0080E736 /* Assets.xcassets */,
+				EF58609020E1D3A000D32EC8 /* Accounts */,
 				EF3DD41F20DFF14E0080E736 /* LaunchScreen.storyboard */,
 				EF3DD42220DFF14E0080E736 /* Info.plist */,
 				EF3DD42820DFF32B0080E736 /* Config.plist */,
 			);
 			path = VisorChat;
+			sourceTree = "<group>";
+		};
+		EF58609020E1D3A000D32EC8 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				EF58608C20E1D38400D32EC8 /* LoginViewController.storyboard */,
+				EF58609120E1D3B900D32EC8 /* SignupViewController.swift */,
+				EF58608E20E1D39700D32EC8 /* SignupViewController.storyboard */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3DD42920DFF32B0080E736 /* Config.plist in Resources */,
+				EFF8F8D120E1E394003CBA0D /* FeedViewController.storyboard in Resources */,
 				EF3DD42120DFF14E0080E736 /* LaunchScreen.storyboard in Resources */,
+				EF58608D20E1D38400D32EC8 /* LoginViewController.storyboard in Resources */,
 				EF3DD41E20DFF14E0080E736 /* Assets.xcassets in Resources */,
 				EF3DD41C20DFF14B0080E736 /* Main.storyboard in Resources */,
+				EF58608F20E1D39700D32EC8 /* SignupViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +201,8 @@
 				"${BUILT_PRODUCTS_DIR}/ParseLiveQuery/ParseLiveQuery.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftValidator/SwiftValidator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -185,6 +213,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseLiveQuery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftValidator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -216,7 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF58609220E1D3B900D32EC8 /* SignupViewController.swift in Sources */,
 				EF3DD41920DFF14B0080E736 /* FeedViewController.swift in Sources */,
+				EFF8F8D320E1E3F6003CBA0D /* MainNavigationController.swift in Sources */,
 				EF3DD41720DFF14B0080E736 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

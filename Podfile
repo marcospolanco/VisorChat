@@ -10,7 +10,9 @@ target 'VisorChat' do
   pod 'ParseLiveQuery'
   pod 'MessengerKit', :git => 'https://github.com/steve228uk/MessengerKit.git'
   pod 'SwiftDate'
-
+  pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
+  pod 'SwiftSpinner'
+  
 end
 
 post_install do | installer |
