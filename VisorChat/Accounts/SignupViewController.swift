@@ -27,7 +27,7 @@ class SignupViewController: UIViewController {
         
     }
     
-    @IBAction func signup(_ sender: Any){
+    @IBAction func submit(_ sender: Any){
         self.validationSuccessful() //        validator.validate(self)
     }
 }
@@ -50,22 +50,6 @@ extension SignupViewController: UITextFieldDelegate {
     }
 }
 
-typealias VoidHandler = ()->()
-typealias BoolHandler = (Bool)->()
-
-/*  Loads and returns a view controller in the given storyboard and storyboard identifier.
- */
-
-
-extension UIViewController {
-    static var instance: UIViewController! { //we want to crash hard if we cannot create the view controller
-        let sb = UIStoryboard(name: "\(self)", bundle: Bundle.main)
-        let vc = sb.instantiateInitialViewController()
-        let _ = vc?.view //force the loading of the views
-        return vc
-    }
-}
-
 extension SignupViewController: ValidationDelegate {
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
     }
@@ -81,7 +65,7 @@ extension SignupViewController: ValidationDelegate {
         }
     }
     
-    func validationSuccessful() {
+    @objc func validationSuccessful() {
         SwiftSpinner.show("Creating")
         //check whether there are an
         
@@ -93,10 +77,7 @@ extension SignupViewController: ValidationDelegate {
             SwiftSpinner.hide()
             
             guard let _self = self else {return print("SignupViewController.deallocated")}
-            print("\(_self).\(#function): success:\(success)")
-            if success {
-                _self.navigationController?.viewControllers = [FeedViewController.instance]
-            }
+            AppDelegate.rootViewController?.verifyAuthentication()
         }
     }
 }

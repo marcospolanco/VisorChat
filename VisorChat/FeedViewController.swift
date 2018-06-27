@@ -46,7 +46,7 @@ class FeedViewController: MSGMessengerViewController {
     }
     
     private func subscribe() {
-        guard let query = Post.query()?.whereKeyExists(Post.Fields.source.rawValue).includeKeys([Post.Fields.source.rawValue,Post.Fields.target.rawValue]) else {return print("nil query")}
+        guard let query = Post.query()?.whereKeyExists(Post.Fields.target.rawValue).includeKeys([Post.Fields.source.rawValue,Post.Fields.target.rawValue]) else {return print("nil query")}
         subscription = AppDelegate.shared?.client?.subscribe(query).handle(Event.created){[weak self] _ , post in
             guard let post = post as? Post else {return print("post coult not be cas to Post")}
             DispatchQueue.main.async {
@@ -79,6 +79,12 @@ class FeedViewController: MSGMessengerViewController {
     override var style: MSGMessengerStyle {return MessengerKit.Styles.travamigos}
     
     override func inputViewPrimaryActionTriggered(inputView: MSGInputView) {
+        if inputView.message.lowercased() == "logout" {
+            PFUser.logOut()
+            AppDelegate.rootViewController?.verifyAuthentication()
+            return
+        }
+        
         let post = Post()
         post.source = PFUser.current()
         post.content = inputView.message
@@ -147,17 +153,6 @@ extension FeedViewController: MSGDelegate {
     func shouldOpen(url: URL) -> Bool {return false}
 }
 
-extension PFUser {
-    
-    enum Fields: String {
-        case fullname = "fullname"
-    }
-    
-    var fullname: String? {
-        return self.value(forKey: Fields.fullname.rawValue) as? String
-    }
-}
-
 extension PFUser : MSGUser {
     public var displayName: String {
         return self.fullname ?? "Anonymous"
@@ -173,33 +168,5 @@ extension PFUser : MSGUser {
     
     public var isSender: Bool {
         return PFUser.current() == self
-    }
-}
-
-class Post: PFObject {
-    @NSManaged var source:      PFUser?
-    @NSManaged var target:      PFUser?
-    @NSManaged var content:     String?
-    
-    enum Fields: String {
-        case source = "source"
-        case target = "target"
-        case content = "content"
-    }
-}
-
-class Database {
-    
-    static var shared = Database()
-    
-    //cache of user information
-    var users = [String: PFUser]()
-    var posts = [String: Post]()
-    var lastLoad: Date?
-}
-
-extension PFObject: PFSubclassing {
-    public static func parseClassName() -> String {
-        return "\(self)"
     }
 }

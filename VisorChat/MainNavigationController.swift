@@ -15,10 +15,16 @@ class MainNavigationController: UINavigationController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let _ = PFUser.current() {
+        self.verifyAuthentication()
+    }
+    
+    func verifyAuthentication() {
+        if let user = PFUser.current(), user.isAuthenticated {
+            //we have an authenticated user, so go straight to the feed
             self.viewControllers = [FeedViewController.instance]
         } else {
-            self.viewControllers = [SignupViewController.instance]
+            //we do not, so show them signup screen
+            self.viewControllers = [AuthenticationViewController.instance]
         }
     }
 }

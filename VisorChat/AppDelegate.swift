@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      */
     static var shared: AppDelegate? {return UIApplication.shared.delegate as? AppDelegate}
     
+    static var rootViewController: MainNavigationController? {return shared?.window?.rootViewController as? MainNavigationController}
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         
