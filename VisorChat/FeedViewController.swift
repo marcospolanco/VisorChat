@@ -11,8 +11,14 @@ import Parse
 import MessengerKit
 import SwiftDate
 import ParseLiveQuery
+import SwiftyCam
 
 class FeedViewController: MSGMessengerViewController {
+    
+    var target: PFUser? {
+        didSet {self.load()}
+    }
+    
     var posts: [Post] = [] {
         didSet {
             self.messages = posts.enumerated().map {(arg: (offset: Int, post: Post)) -> MSGMessage? in
@@ -28,7 +34,22 @@ class FeedViewController: MSGMessengerViewController {
         didSet {self.collectionView.reloadData()}
     }
     
+    weak var camera: CameraViewController?
+    
     var subscription: Subscription<PFObject>?
+    
+    private func addMediaButton(){
+        guard let messageInputView = self.messageInputView as? VisorMessageInputView else {return print("invalid input view")}
+        messageInputView.mediaTapper.onTap(target: self, selector: #selector(mediaButtonTapped))
+    }
+    
+    @objc func mediaButtonTapped(){
+        let camera = CameraViewController()
+        camera.cameraDelegate = self
+        
+        self.camera = camera
+        self.present(camera, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +57,26 @@ class FeedViewController: MSGMessengerViewController {
         dataSource = self
         delegate = self
         
-        self.subscribe()
+        self.addMediaButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.load()
+        self.subscribe()
+
+        NotificationCenter.default.addObserver(forName: .onTargetSelected, object: nil, queue: nil) {[weak self] notification in
+            if let target = notification.object as? PFUser {
+                self?.target = target
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: .onTargetSelected, object: nil)
     }
     
     private func subscribe() {
@@ -76,7 +110,11 @@ class FeedViewController: MSGMessengerViewController {
         }
     }
     
-    override var style: MSGMessengerStyle {return MessengerKit.Styles.travamigos}
+    override var style: MSGMessengerStyle {
+        var style = MessengerKit.Styles.travamigos
+        style.inputView = VisorMessageInputView.self
+        return style
+    }
     
     override func inputViewPrimaryActionTriggered(inputView: MSGInputView) {
         if inputView.message.lowercased() == "logout" {
@@ -144,6 +182,40 @@ extension FeedViewController: MSGDataSource {
     }
 }
 
+extension Double {var asInt: Int {return Int(self)}}
+
+extension FeedViewController: SwiftyCamButtonDelegate {
+    func buttonWasTapped() {
+        self.camera?.takePhoto()
+    }
+    
+    func buttonDidBeginLongPress() {
+        print(#function)
+    }
+    
+    func buttonDidEndLongPress() {
+        print(#function)
+    }
+    
+    func longPressDidReachMaximumDuration() {
+        print(#function)
+    }
+    
+    func setMaxiumVideoDuration() -> Double {
+        return 1000.00
+    }
+}
+
+extension FeedViewController: SwiftyCamViewControllerDelegate {
+    func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
+        swiftyCam.dismiss(animated: true)
+        
+        guard let user = PFUser.current() else {return print("no authenticated user")}
+        let message = MSGMessage.init(id: Date().timeIntervalSinceReferenceDate.asInt,
+                                      body: .image(photo), user: user, sentAt: Date())
+        self.insert(message)
+    }
+}
 extension FeedViewController: MSGDelegate {
     func linkTapped(url: URL) {}
     func avatarTapped(for user: MSGUser) {}

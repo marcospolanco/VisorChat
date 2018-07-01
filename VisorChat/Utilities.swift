@@ -25,3 +25,13 @@ extension UIViewController {
     }
 }
 
+/*  Extension so an image can be tapped like a button to invoke a selector
+ */
+extension UIView {
+    func onTap(target: AnyObject, selector: Selector) {
+        self.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer.init(target: target, action: selector)
+        tap.numberOfTapsRequired = 1
+        self.addGestureRecognizer(tap)
+    }
+}

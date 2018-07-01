@@ -8,11 +8,14 @@ target 'VisorChat' do
   # Pods for VisorChat
   pod 'Parse'
   pod 'ParseLiveQuery'
-  pod 'MessengerKit', :git => 'https://github.com/steve228uk/MessengerKit.git'
+  pod 'MessengerKit', :git => 'https://github.com/marcospolanco/MessengerKit.git'
   pod 'SwiftDate'
   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
   pod 'SwiftSpinner'
-  
+  pod 'SwiftyCam', :git => 'https://github.com/Awalz/SwiftyCam.git', :branch => 'Swift4'
+  pod 'Cloudinary'
+  pod 'SwipeableTabBarController'
+
 end
 
 post_install do | installer |

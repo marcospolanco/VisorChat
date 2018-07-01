@@ -21,7 +21,7 @@ class MainNavigationController: UINavigationController {
     func verifyAuthentication() {
         if let user = PFUser.current(), user.isAuthenticated {
             //we have an authenticated user, so go straight to the feed
-            self.viewControllers = [FeedViewController.instance]
+            self.viewControllers = [MainAppViewController.instance]
         } else {
             //we do not, so show them signup screen
             self.viewControllers = [AuthenticationViewController.instance]
