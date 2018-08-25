@@ -19,7 +19,8 @@ class MainNavigationController: UINavigationController {
     }
     
     func verifyAuthentication() {
-        if let user = PFUser.current(), user.isAuthenticated {
+        if let user = PFUser.current() , user.isAuthenticated {
+            //this user can have an expired token? @fixme
             //we have an authenticated user, so go straight to the feed
             self.viewControllers = [MainAppViewController.instance]
         } else {

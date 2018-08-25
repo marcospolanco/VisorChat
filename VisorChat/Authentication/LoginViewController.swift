@@ -27,6 +27,11 @@ class LoginViewController: SignupViewController {
         PFUser.logInWithUsername(inBackground: email, password: password) {user, error in
             SwiftSpinner.hide()
             guard let _ = user else {return print("error: \(error?.localizedDescription ?? "<nil error>")")}
+            
+            //save the authentication information
+            Defaults.email.save(email)
+            Defaults.password.save(password)
+            
             AppDelegate.rootViewController?.verifyAuthentication()
         }
     }

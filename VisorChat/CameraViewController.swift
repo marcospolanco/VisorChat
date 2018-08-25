@@ -12,4 +12,10 @@ import SwiftyCam
 
 class CameraViewController: SwiftyCamViewController {
     @IBOutlet weak var shotBtn: SwiftyCamButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.shotBtn.delegate = self
+    }
 }

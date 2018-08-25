@@ -38,7 +38,7 @@
                                 <state key="normal" title="Sign Up With Facebook"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jxd-lu-nEV">
-                                <rect key="frame" x="0.0" y="223" width="375" height="222"/>
+                                <rect key="frame" x="0.0" y="222.5" width="375" height="222"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KT5-5m-BGW">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
@@ -140,7 +140,7 @@
                                 <state key="normal" title="Sign In With Facebook"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iFp-rW-dg5">
-                                <rect key="frame" x="0.0" y="223" width="375" height="222"/>
+                                <rect key="frame" x="0.0" y="222.5" width="375" height="222"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lan-W2-0cb">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>

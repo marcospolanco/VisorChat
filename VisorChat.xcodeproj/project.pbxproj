@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E1F32E5AF7DBA366138BA75 /* Pods_VisorChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7F9539637D96B14BC23A3D /* Pods_VisorChat.framework */; };
+		EF1D583F20EC6754005A710A /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D583E20EC6754005A710A /* Defaults.swift */; };
 		EF39E15820E5BFA900262C67 /* MainAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39E15720E5BFA900262C67 /* MainAppViewController.swift */; };
 		EF39E15A20E5BFC900262C67 /* MainAppViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF39E15920E5BFC900262C67 /* MainAppViewController.storyboard */; };
 		EF39E15C20E5C00500262C67 /* PeopleFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39E15B20E5C00500262C67 /* PeopleFinderViewController.swift */; };
@@ -20,6 +21,7 @@
 		EF3DD42920DFF32B0080E736 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF3DD42820DFF32B0080E736 /* Config.plist */; };
 		EF58608F20E1D39700D32EC8 /* AuthenticationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF58608E20E1D39700D32EC8 /* AuthenticationViewController.storyboard */; };
 		EF58609220E1D3B900D32EC8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF58609120E1D3B900D32EC8 /* SignupViewController.swift */; };
+		EFAC2F892130611A0062C80D /* ReadFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC2F882130611A0062C80D /* ReadFriends.swift */; };
 		EFD4724820E3AF7F00AA8C5E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4724720E3AF7F00AA8C5E /* LoginViewController.swift */; };
 		EFF6EB2820E7CEF500BCB1F0 /* VisorMessageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFF6EB2720E7CEF500BCB1F0 /* VisorMessageInputView.xib */; };
 		EFF6EB2A20E7D51000BCB1F0 /* VisorMessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF6EB2920E7D51000BCB1F0 /* VisorMessageInputView.swift */; };
@@ -35,6 +37,7 @@
 /* Begin PBXFileReference section */
 		9F56ED88430B694A7B0E90AC /* Pods-VisorChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisorChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VisorChat/Pods-VisorChat.debug.xcconfig"; sourceTree = "<group>"; };
 		CB7F9539637D96B14BC23A3D /* Pods_VisorChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VisorChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1D583E20EC6754005A710A /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		EF39E15720E5BFA900262C67 /* MainAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewController.swift; sourceTree = "<group>"; };
 		EF39E15920E5BFC900262C67 /* MainAppViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainAppViewController.storyboard; sourceTree = "<group>"; };
 		EF39E15B20E5C00500262C67 /* PeopleFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFinderViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		EF3DD42820DFF32B0080E736 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		EF58608E20E1D39700D32EC8 /* AuthenticationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthenticationViewController.storyboard; sourceTree = "<group>"; };
 		EF58609120E1D3B900D32EC8 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		EFAC2F882130611A0062C80D /* ReadFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFriends.swift; sourceTree = "<group>"; };
 		EFD4724720E3AF7F00AA8C5E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EFF6EB2720E7CEF500BCB1F0 /* VisorMessageInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisorMessageInputView.xib; sourceTree = "<group>"; };
 		EFF6EB2920E7D51000BCB1F0 /* VisorMessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisorMessageInputView.swift; sourceTree = "<group>"; };
@@ -91,6 +95,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF33FAC920E95CF30099F8F7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EF3DD41A20DFF14B0080E736 /* Main.storyboard */,
+				EFF8F8D620E3ADF0003CBA0D /* Utilities.swift */,
+				EF3DD41D20DFF14E0080E736 /* Assets.xcassets */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		EF3DD40A20DFF14B0080E736 = {
 			isa = PBXGroup;
 			children = (
@@ -120,14 +134,13 @@
 				EF39E15D20E5C02300262C67 /* PeopleFinderViewController.storyboard */,
 				EF3DD41620DFF14B0080E736 /* AppDelegate.swift */,
 				EFF8F8D220E1E3F6003CBA0D /* MainNavigationController.swift */,
+				EFAC2F882130611A0062C80D /* ReadFriends.swift */,
 				EF3DD41820DFF14B0080E736 /* FeedViewController.swift */,
 				EFF6EB2920E7D51000BCB1F0 /* VisorMessageInputView.swift */,
 				EFF6EB2B20E7FD7000BCB1F0 /* CameraViewController.swift */,
 				EFF6EB2D20E7FE6A00BCB1F0 /* CameraViewController.storyboard */,
 				EFF8F8D820E3AE1E003CBA0D /* Model.swift */,
-				EF3DD41A20DFF14B0080E736 /* Main.storyboard */,
-				EFF8F8D620E3ADF0003CBA0D /* Utilities.swift */,
-				EF3DD41D20DFF14E0080E736 /* Assets.xcassets */,
+				EF33FAC920E95CF30099F8F7 /* Application */,
 				EF58609020E1D3A000D32EC8 /* Authentication */,
 				EF3DD41F20DFF14E0080E736 /* LaunchScreen.storyboard */,
 				EF3DD42220DFF14E0080E736 /* Info.plist */,
@@ -143,6 +156,7 @@
 				EF58609120E1D3B900D32EC8 /* SignupViewController.swift */,
 				EFD4724720E3AF7F00AA8C5E /* LoginViewController.swift */,
 				EF58608E20E1D39700D32EC8 /* AuthenticationViewController.storyboard */,
+				EF1D583E20EC6754005A710A /* Defaults.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -234,6 +248,7 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleBooksApiClient/GoogleBooksApiClient.framework",
 				"${BUILT_PRODUCTS_DIR}/MessengerKit/MessengerKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/ParseLiveQuery/ParseLiveQuery.framework",
@@ -250,6 +265,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cloudinary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleBooksApiClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessengerKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseLiveQuery.framework",
@@ -291,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFF8F8D920E3AE1E003CBA0D /* Model.swift in Sources */,
+				EFAC2F892130611A0062C80D /* ReadFriends.swift in Sources */,
+				EF1D583F20EC6754005A710A /* Defaults.swift in Sources */,
 				EF39E15820E5BFA900262C67 /* MainAppViewController.swift in Sources */,
 				EF39E15C20E5C00500262C67 /* PeopleFinderViewController.swift in Sources */,
 				EFF8F8D720E3ADF0003CBA0D /* Utilities.swift in Sources */,

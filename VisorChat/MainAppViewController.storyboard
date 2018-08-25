@@ -21,11 +21,20 @@
                     <connections>
                         <segue destination="Cdm-ct-GAK" kind="relationship" relationship="viewControllers" id="iTP-Za-tlf"/>
                         <segue destination="h7x-FI-YsO" kind="relationship" relationship="viewControllers" id="ImZ-h3-f6g"/>
+                        <segue destination="m6f-Iq-uvg" kind="show" id="aLj-LI-yNU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sso-FG-rgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-836" y="-262"/>
+        </scene>
+        <!--CameraViewController-->
+        <scene sceneID="ly6-Fx-EG8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CameraViewController" id="m6f-Iq-uvg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPs-t3-JGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143" y="-488"/>
         </scene>
         <!--FeedViewController-->
         <scene sceneID="hdg-9q-10n">
@@ -35,7 +44,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5O-4N-wQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-155" y="-485"/>
+            <point key="canvasLocation" x="-154" y="-263"/>
         </scene>
         <!--PeopleFinderViewController-->
         <scene sceneID="ArM-OF-hdt">

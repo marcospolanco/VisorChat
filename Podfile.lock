@@ -4,6 +4,7 @@ PODS:
   - Bolts/Tasks (1.9.0)
   - Cloudinary (2.4.0):
     - Alamofire (~> 4.7.2)
+  - GoogleBooksApiClient (0.0.4)
   - MessengerKit (1.0.0)
   - Parse (1.17.1):
     - Parse/Core (= 1.17.1)
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - Cloudinary
+  - GoogleBooksApiClient
   - MessengerKit (from `https://github.com/marcospolanco/MessengerKit.git`)
   - Parse
   - ParseLiveQuery
@@ -37,6 +39,7 @@ SPEC REPOS:
     - Bolts
     - Bolts-Swift
     - Cloudinary
+    - GoogleBooksApiClient
     - Parse
     - ParseLiveQuery
     - Starscream
@@ -70,6 +73,7 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Bolts-Swift: fa98d1b59fc1acea9b21a21306dcdca1c85e3737
   Cloudinary: d87b545d6a5d00c4022bec964839fdaf359d7c53
+  GoogleBooksApiClient: a2c931bcfa2d5251a2ed7945f7a424f7a720563b
   MessengerKit: 98afa44728b8e12672ece6db7764433e72832bf7
   Parse: d3edaf8c7c722cb33cb83ba7821d015ae32d362d
   ParseLiveQuery: 0ea078a12015d64070d0ae07da32fae3d3198c42
@@ -80,6 +84,6 @@ SPEC CHECKSUMS:
   SwiftyCam: 7c826b73a5b208677aee29390582c771bf748661
   SwipeableTabBarController: 975a6cb090a2eef4c676697731f5c6cbc831009e
 
-PODFILE CHECKSUM: 72aa247979e79208ac8b5c98e4d6fe4cfc259027
+PODFILE CHECKSUM: 9e0d6c6ab71fd4af3ebc80eb1ff2b3ae70e83508
 
 COCOAPODS: 1.5.3

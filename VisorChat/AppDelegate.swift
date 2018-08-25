@@ -40,7 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //initialize LiveQuery
         self.client = ParseLiveQuery.Client(server: wssUrl)
-        
     }
     
     /*  Provide access to the application delegate

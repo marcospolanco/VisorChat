@@ -15,6 +15,7 @@ target 'VisorChat' do
   pod 'SwiftyCam', :git => 'https://github.com/Awalz/SwiftyCam.git', :branch => 'Swift4'
   pod 'Cloudinary'
   pod 'SwipeableTabBarController'
+  pod 'GoogleBooksApiClient'
 
 end
 

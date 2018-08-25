@@ -25,7 +25,18 @@ class SignupViewController: UIViewController {
         self.fields = [emailField, passwordField]
         emailField.becomeFirstResponder()
         
+        self.view.onTap(target: self, selector: #selector(dismissKeyboard))
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        emailField.text = Defaults.email.string
+        passwordField.text = Defaults.password.string
+    }
+    
+    /**/
+    @objc func dismissKeyboard() {self.fields.forEach{$0.endEditing(true)}}
     
     @IBAction func submit(_ sender: Any){
         self.validationSuccessful() //        validator.validate(self)
@@ -75,6 +86,12 @@ extension SignupViewController: ValidationDelegate {
         }
         self.create(email: email, password:password){[weak self] success in
             SwiftSpinner.hide()
+            
+            // save the email/password to defaults if creation worked
+            if success {
+                Defaults.email.save(email)
+                Defaults.password.save(password)
+            }
             
             guard let _self = self else {return print("SignupViewController.deallocated")}
             AppDelegate.rootViewController?.verifyAuthentication()

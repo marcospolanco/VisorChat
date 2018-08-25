@@ -19,8 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52o-Y4-lXz" customClass="SwiftyCamButton" customModule="SwiftyCam">
-                                <rect key="frame" x="154.5" y="569" width="66" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52o-Y4-lXz" customClass="SwiftyCamButton" customModule="VisorChat">
+                                <rect key="frame" x="121" y="501.5" width="133" height="133.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="52o-Y4-lXz" secondAttribute="height" multiplier="1:1" id="jsv-KD-Ltr"/>
                                 </constraints>
@@ -29,14 +30,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="52o-Y4-lXz" firstAttribute="width" secondItem="SaI-qh-QDW" secondAttribute="height" multiplier="66:667" id="DJC-W6-8DU"/>
+                            <constraint firstItem="52o-Y4-lXz" firstAttribute="width" secondItem="SaI-qh-QDW" secondAttribute="height" multiplier="1:5" id="DJC-W6-8DU"/>
                             <constraint firstItem="ret-OX-HI5" firstAttribute="bottom" secondItem="52o-Y4-lXz" secondAttribute="bottom" constant="32" id="aG4-oX-Y4M"/>
                             <constraint firstItem="52o-Y4-lXz" firstAttribute="centerX" secondItem="SaI-qh-QDW" secondAttribute="centerX" id="nlf-iT-fa6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ret-OX-HI5"/>
                     </view>
                     <connections>
-                        <outlet property="shotBtn" destination="52o-Y4-lXz" id="2eA-Mb-4ky"/>
+                        <outlet property="shotBtn" destination="52o-Y4-lXz" id="cYx-lL-twO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Onr-8f-d7x" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,5 +8,6 @@
 
 import Foundation
 import UIKit
+import SwipeableTabBarController
 
-class AuthenticationViewController: UITabBarController {}
+class AuthenticationViewController: SwipeableTabBarController {}
